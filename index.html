@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Movie Store</title>
+        <script type="text/javascript">
+          let a = ["аниме", "биографический", "боевик", "вестерн", "военный", "детектив", "детский", "документальный",
+          "драма", "исторический", "кинокомикс", "комедия", "концерт", "короткометражный",
+          "криминал", "мелодрама", "мистика", "музыка", "мультфильм", "мюзикл",
+          "научный", "нуар", "приключения", "реалити-шоу", "семейный", "спорт",
+          "фэнтези", "фантастика", "ужасы", "триллер", "ток-шоу"];
+          let max = 30, min = 0;
+
+          function randomr() {
+            let b = Math.round(Math.random() * (max - min) + min);
+            document.querySelector('.asd').innerHTML = a[b];
+        }
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="image/logo.png" width="120" height="23" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Фильмы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Сериалы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="games.php">Игры</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Комиксы</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-secondary nav-link" onclick="randomr();">Случайный выбор жанра: </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><span class="asd"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </nav>
+        <section class="features-icons text-center">
+          <div class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="rounded" src="image/banner.jpg" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Стражи галактик</h5>
+                    <a class="btn btn-primary" href="">Смотреть сейчас</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded" src="image/banner1.jpg" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Трансформеры: Эпоха истребления</h5>
+                    <a class="btn btn-primary" href="">Смотреть сейчас</a>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="rounded" src="image/banner2.jpg" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Игра престолов</h5>
+                    <a class="btn btn-primary" href="">Смотреть сейчас</a>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Назад</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Далее</span>
+              </a>
+            </div>
+            <p></p>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-7">
+                  <h3>Избранные фильмы</h3>
+                </div>
+                <div class="col-lg-5">
+                  Сортировка лайков:
+                  <a class="btn btn-outline-secondary feedUp">По возрастанию</a>
+                  <a class="btn btn-outline-secondary feedDown">По убыванию</a>
+                </div>
+              </div>
+            </div>
+            <p></p>
+            <div class="row result">
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic1.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Стражи галактик</h5>
+                    <p class="card-text"><b>Релиз:</b> 21 июля 2014г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 1957
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic2.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Первый мститель</h5>
+                    <p class="card-text"><b>Релиз:</b> 19 июля 2011г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 2140
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic3.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Железный человек 3</h5>
+                    <p class="card-text"><b>Релиз:</b> 2 мая 2013г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 2257
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic6.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Первый мститель 2</h5>
+                    <p class="card-text"><b>Релиз:</b> 3 апреля 2014г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 2301
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+            <p></p>
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic7.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Человек-паук 3</h5>
+                    <p class="card-text"><b>Релиз:</b> 3 мая 2007г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 1692
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic8.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Новый Человек-паук</h5>
+                    <p class="card-text"><b>Релиз:</b> 29 июня 2012г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 2412
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic9.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Халк</h5>
+                    <p class="card-text"><b>Релиз:</b> 19 июня 2003г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 1757
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" height="229" width="250" src="image/pic10.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Росомаха: Бессмертный</h5>
+                    <p class="card-text"><b>Релиз:</b> 25 июля 2013г</br>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg> 2051
+                    </p>
+                    <a href="#" class="btn btn-primary">Смотреть</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                        <ul class="list-inline mb-2">
+                            <li class="list-inline-item"><a href="">О нас</a></li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item"><a href="">Контакт</a></li>
+                        </ul>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Movie Store 2021. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item me-4">
+                                <a href=""><i class="bi-facebook fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item me-4">
+                                <a href=""><i class="bi-twitter fs-3"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href=""><i class="bi-instagram fs-3"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
